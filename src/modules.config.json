@@ -16,9 +16,9 @@
         "content": "intro-conceptos-bim.md",
         "resources": ["EIC-B_Fundamentos para Autodesk® Revit® MEP.pdf"],
         "sections": [
-          { "title": "¿Qué es BIM? Ventajas vs CAD tradicional", "content": "¿Qué es BIM? Ventajas vs CAD tradicional" },
-          { "title": "Metodología BIM: Modelado, Información, Construcción", "content": "Metodología BIM: Modelado, Información, Construcción" },
-          { "title": "Ciclo de vida del proyecto BIM", "content": "Ciclo de vida del proyecto BIM" }
+          { "title": "Ventajas vs CAD tradicional", "content": "¿Qué es BIM? Ventajas vs CAD tradicional", "file": "mod-01-01-01.md" },
+          { "title": "Metodología BIM: Modelado, Información, Construcción", "content": "Metodología BIM: Modelado, Información, Construcción", "file": "mod-01-01-02.md" },
+          { "title": "Ciclo de vida del proyecto BIM", "content": "Ciclo de vida del proyecto BIM", "file": "mod-01-01-03.md" }
         ]
       },
       {

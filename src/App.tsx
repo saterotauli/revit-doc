@@ -49,33 +49,39 @@ function App() {
     // Si hay apartado seleccionado
     if (currentSection && sub) {
       const [, idx] = currentSection.split('__');
-      const secIdx = parseInt(idx, 10) + 1;
-      if (!isNaN(secIdx)) {
-        fileName = `mod-${String(modIdx).padStart(2, '0')}-${String(subIdx).padStart(2, '0')}-${String(secIdx).padStart(2, '0')}.md`;
+      const secIdx = parseInt(idx, 10);
+      let sectionObj = null;
+      if (!isNaN(secIdx) && sub.sections && sub.sections[secIdx]) {
+        sectionObj = sub.sections[secIdx];
+      }
+      if (sectionObj && typeof (sectionObj as any).file === 'string') {
+        fileName = (sectionObj as any).file;
+      } else if (!isNaN(secIdx)) {
+        fileName = `mod-${String(modIdx).padStart(2, '0')}-${String(subIdx).padStart(2, '0')}-${String(secIdx + 1).padStart(2, '0')}.md`;
       }
       setResources(sub && sub.resources ? sub.resources : []);
-    } else if (subIdx > 0 && currentSub) {
-      fileName = `mod-${String(modIdx).padStart(2, '0')}-${String(subIdx).padStart(2, '0')}.md`;
-      setResources(sub && sub.resources ? sub.resources : []);
-    } else {
+    } else if (!currentSub) {
       // Solo módulo seleccionado
       fileName = mod.content || `mod-${String(modIdx).padStart(2, '0')}.md`;
       setResources([]);
-    }
-    (async () => {
-      try {
-        const res = await fetch(`/src/modules/${fileName}`);
-        if (!res.ok) {
-          setContent('<div style="color:#b00">No se ha encontrado el archivo de contenido.</div>');
-          return;
+      (async () => {
+        try {
+          const res = await fetch(`/src/modules/${fileName}`);
+          if (!res.ok) {
+            setContent('<div style="color:#b00">No se ha encontrado el archivo de contenido.</div>');
+            return;
+          }
+          const md = await res.text();
+          const html = await marked(md);
+          setContent(html);
+        } catch (e) {
+          setContent('<div style="color:#b00">Error al cargar el archivo de contenido.</div>');
         }
-        const md = await res.text();
-        const html = await marked(md);
-        setContent(html);
-      } catch (e) {
-        setContent('<div style="color:#b00">Error al cargar el archivo de contenido.</div>');
-      }
-    })();
+      })();
+    } else {
+      // Submódulo seleccionado pero sin sección: no mostrar nada
+      setContent('');
+    }
   }, [currentModule, currentSub, currentSection]);
 
   return (
@@ -110,42 +116,9 @@ function App() {
     return mod.label.es;
   })()}
 </div>
-<div style={{ fontSize: 16, color: '#888', marginBottom: 18, textAlign: 'left' }}>
-  {(() => {
-    const pad = (n: number) => n.toString().padStart(2, '0');
-    const modIdx = modulesConfig.findIndex(m => m.id === currentModule) + 1;
-    if (modIdx < 1) return '';
-    const subIdx = (() => {
-      const mod = modulesConfig.find(m => m.id === currentModule);
-      if (!mod) return -1;
-      return mod.subsections.findIndex((s: any) => s.id === currentSub) + 1;
-    })();
-    if (currentSection) {
-      const [subId, idx] = currentSection.split('__');
-      const idxNum = parseInt(idx, 10) + 1;
-      if (subIdx > 0 && !isNaN(idxNum)) {
-        return `Archivo: mod-${pad(modIdx)}-${pad(subIdx)}-${pad(idxNum)}.md`;
-      }
-    }
-    if (subIdx > 0 && currentSub) {
-      return `Archivo: mod-${pad(modIdx)}-${pad(subIdx)}.md`;
-    }
-    return `Archivo: mod-${pad(modIdx)}.md`;
-  })()}
-</div>
+
 <div dangerouslySetInnerHTML={{ __html: content }} />
-              {resources.length > 0 && (
-                <div style={{ marginTop: 32 }}>
-                  <h3>Recursos asociados</h3>
-                  <ul>
-                    {resources.map(file => (
-                      <li key={file}>
-                        <a href={RESOURCE_PATH + file} target="_blank" rel="noopener noreferrer">{file}</a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+
             </div>
           </div>
         </main>
