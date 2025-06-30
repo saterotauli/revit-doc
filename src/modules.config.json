@@ -1,5 +1,11 @@
 [
   {
+    "id": "presentacion",
+    "label": { "es": "MÓDULO 0: Presentación" },
+    "content": "mod-00.md",
+    "subsections": []
+  },
+  {
     "id": "intro_bim_revit",
     "label": { "es": "MÓDULO 1: Introducción a BIM y Revit MEP", "ca": "MÒDUL 1: Introducció a BIM i Revit MEP" },
     "content": "mod-01.md",
