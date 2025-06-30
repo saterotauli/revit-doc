@@ -1,0 +1,12 @@
+{
+  "modules": {
+    "intro": "Introducció a Revit i BIM",
+    "architecture": "Modelatge arquitectònic bàsic",
+    "families": "Famílies i components",
+    "documentation": "Documentació i gestió",
+    "mep_fundamentals": "Fonaments de Revit MEP",
+    "mechanical": "Instal·lacions mecàniques i elèctriques",
+    "plumbing": "Fontaneria i coordinació",
+    "practice": "Pràctica final"
+  }
+}
