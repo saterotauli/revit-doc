@@ -66,7 +66,7 @@ function App() {
       //setResources([]);
       (async () => {
         try {
-          const res = await fetch(`/src/modules/${fileName}`);
+          const res = await fetch(`/modules/${fileName}`);
           if (!res.ok) {
             setContent('<div style="color:#b00">No se ha encontrado el archivo de contenido.</div>');
             return;
