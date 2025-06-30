@@ -14,7 +14,7 @@ document.body.style.width = '100vw';
 document.documentElement.style.height = '100vh';
 document.documentElement.style.width = '100vw';
 
-const RESOURCE_PATH = '/resources/';
+//const RESOURCE_PATH = '/resources/';
 
 function App() {
   
@@ -22,7 +22,7 @@ function App() {
   const [currentSub, setCurrentSub] = useState<string | null>(null);
   const [currentSection, setCurrentSection] = useState<string | null>(null);
   const [content, setContent] = useState('');
-  const [resources, setResources] = useState<string[]>([]);
+  //const [resources, setResources] = useState<string[]>([]);
 
   // Función para seleccionar sección (solo actualiza el estado)
   const handleSelectSection = (subId: string | null, sectionIdx: number | null) => {
@@ -59,11 +59,11 @@ function App() {
       } else if (!isNaN(secIdx)) {
         fileName = `mod-${String(modIdx).padStart(2, '0')}-${String(subIdx).padStart(2, '0')}-${String(secIdx + 1).padStart(2, '0')}.md`;
       }
-      setResources(sub && sub.resources ? sub.resources : []);
+      //setResources(sub && sub.resources ? sub.resources : []);
     } else if (!currentSub) {
       // Solo módulo seleccionado
       fileName = mod.content || `mod-${String(modIdx).padStart(2, '0')}.md`;
-      setResources([]);
+      //setResources([]);
       (async () => {
         try {
           const res = await fetch(`/src/modules/${fileName}`);
