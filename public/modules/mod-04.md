@@ -1,3 +1,3 @@
-# Módulo 04
+# Módulo 02
 
-Bienvenido al módulo 04. Aquí irá el contenido general del módulo.
+Bienvenido al módulo 02. Aquí irá el contenido general del módulo.
