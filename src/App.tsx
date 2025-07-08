@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Sidebar from './components/Sidebar';
-import modulesConfig from './modules.config.json';
+
 import { marked } from 'marked';
 
 // CSS global para quitar márgenes y paddings de body/html
@@ -15,6 +15,22 @@ document.documentElement.style.height = '100vh';
 document.documentElement.style.width = '100vw';
 
 //const RESOURCE_PATH = '/resources/';
+
+type Module = {
+  id: string;
+  label: { es: string; ca?: string };
+  content: string;
+  subsections?: Subsection[];
+};
+
+type Subsection = {
+  id: string;
+  label: { es: string; ca?: string };
+  content: string;
+};
+
+import modulesConfigRaw from './modules.config.json';
+const modulesConfig: Module[] = modulesConfigRaw as Module[];
 
 function App() {
   
@@ -43,30 +59,28 @@ function App() {
     const modIdx = modulesConfig.findIndex(m => m.id === currentModule) + 1;
     const mod = modulesConfig.find(m => m.id === currentModule);
     if (!mod) return;
-    const subIdx = currentSub ? mod.subsections.findIndex((s: any) => s.id === currentSub) + 1 : -1;
-    const sub = currentSub ? mod.subsections.find((s: any) => s.id === currentSub) : null;
+    const subIdx = currentSub ? ((mod.subsections ?? []).findIndex((s: any) => s.id === currentSub) + 1) : -1;
+    const sub = currentSub ? (mod.subsections ?? []).find((s: any) => s.id === currentSub) : null;
     let fileName = '';
     // Si hay apartado seleccionado
     if (currentSection && sub) {
       const [, idx] = currentSection.split('__');
       const secIdx = parseInt(idx, 10);
-      let sectionObj = null;
-      if (!isNaN(secIdx) && sub.sections && sub.sections[secIdx]) {
-        sectionObj = sub.sections[secIdx];
-      }
-      if (sectionObj && typeof (sectionObj as any).file === 'string') {
-        fileName = (sectionObj as any).file;
-      } else if (!isNaN(secIdx)) {
+      if (!isNaN(secIdx)) {
         fileName = `mod-${String(modIdx).padStart(2, '0')}-${String(subIdx).padStart(2, '0')}-${String(secIdx + 1).padStart(2, '0')}.md`;
       }
-      //setResources(sub && sub.resources ? sub.resources : []);
     } else if (!currentSub) {
       // Solo módulo seleccionado
       fileName = mod.content || `mod-${String(modIdx).padStart(2, '0')}.md`;
       //setResources([]);
       (async () => {
         try {
-          const res = await fetch(`${import.meta.env.BASE_URL}modules/${fileName}`);
+          const baseUrl = typeof import.meta.env.BASE_URL === 'string' ? import.meta.env.BASE_URL : '';
+          if (!fileName || !baseUrl) {
+            setContent('<div style="color:#b00">No se ha encontrado el archivo de contenido.</div>');
+            return;
+          }
+          const res = await fetch(`${baseUrl}modules/${fileName}`);
           if (!res.ok) {
             setContent('<div style="color:#b00">No se ha encontrado el archivo de contenido.</div>');
             return;
@@ -104,14 +118,7 @@ function App() {
   {(() => {
     const mod = modulesConfig.find(m => m.id === currentModule);
     if (!mod) return '';
-    const sub = mod.subsections.find((s: any) => s.id === currentSub);
-    if (currentSection && sub) {
-      const [, idx] = currentSection.split('__');
-      const idxNum = parseInt(idx, 10);
-      if (sub.sections && !isNaN(idxNum) && sub.sections[idxNum]) {
-        return sub.sections[idxNum].title;
-      }
-    }
+    const sub: Subsection | undefined = (mod.subsections ?? []).find((s: any) => s.id === currentSub);
     if (sub && sub.label && sub.label.es) return sub.label.es;
     return mod.label.es;
   })()}
