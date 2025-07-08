@@ -6,284 +6,51 @@
     "subsections": []
   },
   {
-    "id": "intro_bim_revit",
-    "label": { "es": "MÓDULO 1: Introducción a BIM y Revit MEP", "ca": "MÒDUL 1: Introducció a BIM i Revit MEP" },
+    "id": "modulo_1",
+    "label": { "es": "MÓDULO 1: INTRODUCCIÓN A REVIT" },
     "content": "mod-01.md",
-    "subsections": [
-      {
-        "id": "1.1",
-        "label": { "es": "1.1 Conceptos fundamentales BIM", "ca": "1.1 Conceptes fonamentals BIM" },
-        "content": "intro-conceptos-bim.md",
-        "resources": ["EIC-B_Fundamentos para Autodesk® Revit® MEP.pdf"],
-        "sections": [
-          { "title": "Ventajas vs CAD tradicional", "content": "¿Qué es BIM? Ventajas vs CAD tradicional", "file": "mod-01-01-01.md" },
-          { "title": "Metodología BIM: Modelado, Información, Construcción", "content": "Metodología BIM: Modelado, Información, Construcción", "file": "mod-01-01-02.md" },
-          { "title": "Ciclo de vida del proyecto BIM", "content": "Ciclo de vida del proyecto BIM", "file": "mod-01-01-03.md" }
-        ]
-      },
-      {
-        "id": "1.2",
-        "label": { "es": "1.2 Introducción a Revit MEP", "ca": "1.2 Introducció a Revit MEP" },
-        "content": "intro-revit-mep.md",
-        "resources": ["EIC-B_Documentación_Autodesk®_Revit®_MEP_2016.pdf"],
-        "sections": [
-          { "title": "Interfaz de usuario y navegación", "content": "Interfaz de usuario y navegación" },
-          { "title": "Navegador de proyectos", "content": "Navegador de proyectos" },
-          { "title": "Paleta de propiedades", "content": "Paleta de propiedades" },
-          { "title": "Disciplinas MEP: Mecánica, Fontanería, Electricidad", "content": "Disciplinas MEP: Mecánica, Fontanería, Electricidad" }
-        ]
-      },
-      {
-        "id": "1.3",
-        "label": { "es": "1.3 Configuración inicial del proyecto", "ca": "1.3 Configuració inicial del projecte" },
-        "content": "intro-configuracion-proyecto.md",
-        "resources": ["Revit Experto. Plantillas I.pdf"],
-        "sections": [
-          { "title": "Plantillas de proyecto MEP", "content": "Plantillas de proyecto MEP" },
-          { "title": "Configuración de unidades", "content": "Configuración de unidades" },
-          { "title": "Vinculación con modelos arquitectónicos", "content": "Vinculación con modelos arquitectónicos" },
-          { "title": "Niveles y rejillas: renombrado y coordinación", "content": "Niveles y rejillas: renombrado y coordinación" },
-          { "title": "Configuraciones de vista", "content": "Configuraciones de vista" }
-        ]
-      }
-    ]
+    "subsections": []
   },
   {
-    "id": "fundamentos_mep",
-    "label": { "es": "MÓDULO 2: Fundamentos MEP y Organización", "ca": "MÒDUL 2: Fonaments MEP i Organització" },
+    "id": "modulo_2",
+    "label": { "es": "MÓDULO 2: INTRODUCCIÓN AL PROYECTO" },
     "content": "mod-02.md",
-    "subsections": [
-      {
-        "id": "2.1",
-        "label": { "es": "2.1 Conceptos MEP básicos", "ca": "2.1 Conceptes MEP bàsics" },
-        "content": "fundamentos-conceptos-mep.md",
-        "resources": ["MEP_1_Modelado.docx"],
-        "sections": [
-          { "title": "Categorías, familias y tipos", "content": "Categorías, familias y tipos" },
-          { "title": "Sistemas lógicos vs físicos", "content": "Sistemas lógicos vs físicos" },
-          { "title": "Conectores y flujo de trabajo", "content": "Conectores y flujo de trabajo" },
-          { "title": "Navegador de sistemas", "content": "Navegador de sistemas" }
-        ]
-      },
-      {
-        "id": "2.2",
-        "label": { "es": "2.2 Organización del proyecto", "ca": "2.2 Organització del projecte" },
-        "content": "fundamentos-organizacion.md",
-        "resources": ["Revit Experto. Plantillas I.pdf"],
-        "sections": [
-          { "title": "Nomenclatura de vistas", "content": "Nomenclatura de vistas" },
-          { "title": "Plantillas de vista", "content": "Plantillas de vista" },
-          { "title": "Filtros de visibilidad", "content": "Filtros de visibilidad" },
-          { "title": "Organización del navegador de proyectos", "content": "Organización del navegador de proyectos" },
-          { "title": "Configuración de estilos gráficos", "content": "Configuración de estilos gráficos" }
-        ]
-      }
-    ]
+    "subsections": []
   },
   {
-    "id": "fontaneria",
-    "label": { "es": "MÓDULO 3: Instalaciones de Fontanería", "ca": "MÒDUL 3: Instal·lacions de Fontaneria" },
+    "id": "modulo_3",
+    "label": { "es": "MÓDULO 3: CLIMATIZACIÓN AIRE" },
     "content": "mod-03.md",
-    "subsections": [
-      {
-        "id": "3.1",
-        "label": { "es": "3.1 Fundamentos de fontanería", "ca": "3.1 Fonaments de fontaneria" },
-        "content": "fontaneria-fundamentos.md",
-        "resources": ["REVIT_MEP_INSTALACIONES_MECANICAS_Y_SANITARIAS.pdf"],
-        "sections": [
-          { "title": "Tipos de sistemas: AFS, ACS, Recirculación", "content": "Tipos de sistemas: AFS, ACS, Recirculación" },
-          { "title": "Elementos terminales y equipos", "content": "Elementos terminales y equipos" },
-          { "title": "Carga de familias específicas", "content": "Carga de familias específicas" }
-        ]
-      },
-      {
-        "id": "3.2",
-        "label": { "es": "3.2 Modelado de sistemas de agua", "ca": "3.2 Modelat de sistemes d'aigua" },
-        "content": "fontaneria-sistemas-agua.md",
-        "resources": ["EIC-B_Documentación_Autodesk®_Revit®_MEP_2016.pdf"],
-        "sections": [
-          { "title": "Colocación de aparatos sanitarios", "content": "Colocación de aparatos sanitarios" },
-          { "title": "Creación de sistemas lógicos", "content": "Creación de sistemas lógicos" },
-          { "title": "Modelado de tuberías (manual y automático)", "content": "Modelado de tuberías (manual y automático)" },
-          { "title": "Conexiones y accesorios", "content": "Conexiones y accesorios" },
-          { "title": "Válvulas y elementos de regulación", "content": "Válvulas y elementos de regulación" }
-        ]
-      },
-      {
-        "id": "3.3",
-        "label": { "es": "3.3 Saneamiento", "ca": "3.3 Sanejament" },
-        "content": "fontaneria-saneamiento.md",
-        "resources": ["EIC-B_Documentación_Autodesk®_Revit®_MEP_2016.pdf"],
-        "sections": [
-          { "title": "Sistemas de evacuación: fecales y pluviales", "content": "Sistemas de evacuación: fecales y pluviales" },
-          { "title": "Modelado con pendientes", "content": "Modelado con pendientes" },
-          { "title": "Red enterrada y pozos", "content": "Red enterrada y pozos" },
-          { "title": "Configuración de materiales específicos", "content": "Configuración de materiales específicos" }
-        ]
-      }
-    ]
+    "subsections": []
   },
   {
-    "id": "climatizacion",
-    "label": { "es": "MÓDULO 4: Instalaciones de Climatización", "ca": "MÒDUL 4: Instal·lacions de Climatització" },
+    "id": "modulo_4",
+    "label": { "es": "MÓDULO 4: CLIMATIZACIÓN AGUA" },
     "content": "mod-04.md",
-    "subsections": [
-      {
-        "id": "4.1",
-        "label": { "es": "4.1 Sistemas de aire", "ca": "4.1 Sistemes d'aire" },
-        "content": "climatizacion-sistemas-aire.md",
-        "resources": ["REVIT_MEP_INSTALACIONES_MECANICAS_Y_SANITARIAS.pdf"],
-        "sections": [
-          { "title": "Elementos terminales: difusores, rejas" },
-          { "title": "Equipos: fancoils, climatizadores" },
-          { "title": "Sistemas de impulsión y retorno" },
-          { "title": "Modelado de conductos rígidos y flexibles" }
-        ]
-      },
-      {
-        "id": "4.2",
-        "label": { "es": "4.2 Sistemas hidrónicos", "ca": "4.2 Sistemes hidròtics" },
-        "content": "climatizacion-sistemas-hidronicos.md",
-        "resources": ["EIC-B_Documentación_Autodesk®_Revit®_MEP_2016.pdf"],
-        "sections": [
-          { "title": "Circuitos de agua fría/caliente" },
-          { "title": "Tuberías de climatización" },
-          { "title": "Bombas y equipos de producción" },
-          { "title": "Conexión entre sistemas aire-agua" },
-          { "title": "Aislamiento de conductos y tuberías" }
-        ]
-      }
-    ]
+    "subsections": []
   },
   {
-    "id": "electricidad",
-    "label": { "es": "MÓDULO 5: Instalaciones Eléctricas", "ca": "MÒDUL 5: Instal·lacions Elèctriques" },
+    "id": "modulo_5",
+    "label": { "es": "MÓDULO 5: CLIMATIZACIÓN AGUA" },
     "content": "mod-05.md",
-    "subsections": [
-      {
-        "id": "5.1",
-        "label": { "es": "5.1 Elementos eléctricos", "ca": "5.1 Elements elèctrics" },
-        "content": "electricidad-elementos.md",
-        "resources": ["REVIT_MEP_INSTALACIONES_ELECTRICAS_Y_TELECOMUNICACIONES.pdf"],
-        "sections": [
-          { "title": "Luminarias y elementos terminales" },
-          { "title": "Cuadros eléctricos y paneles" },
-          { "title": "Interruptores y tomas de corriente" }
-        ]
-      },
-      {
-        "id": "5.2",
-        "label": { "es": "5.2 Distribución eléctrica", "ca": "5.2 Distribució elèctrica" },
-        "content": "electricidad-distribucion.md",
-        "resources": ["EIC-B_Documentación_Autodesk®_Revit®_MEP_2016.pdf"],
-        "sections": [
-          { "title": "Bandejas eléctricas" },
-          { "title": "Tubos corrugados" },
-          { "title": "Modelado de trazados" }
-        ]
-      },
-      {
-        "id": "5.3",
-        "label": { "es": "5.3 Circuitos eléctricos", "ca": "5.3 Circuits elèctrics" },
-        "content": "electricidad-circuitos.md",
-        "resources": ["REVIT_MEP_INSTALACIONES_ELECTRICAS_Y_TELECOMUNICACIONES.pdf"],
-        "sections": [
-          { "title": "Creación de circuitos lógicos" },
-          { "title": "Conexión de elementos a cuadros" },
-          { "title": "Configuración básica de cargas" },
-          { "title": "Nomenclatura de circuitos" }
-        ]
-      }
-    ]
+    "subsections": []
   },
   {
-    "id": "documentacion",
-    "label": { "es": "MÓDULO 6: Documentación y Presentación", "ca": "MÒDUL 6: Documentació i Presentació" },
+    "id": "modulo_6",
+    "label": { "es": "MÓDULO 6: SANEAMIENTO" },
     "content": "mod-06.md",
-    "subsections": [
-      {
-        "id": "6.1",
-        "label": { "es": "6.1 Tablas de planificación", "ca": "6.1 Taules de planificació" },
-        "content": "documentacion-tablas.md",
-        "resources": ["EIC-B_Fundamentos para Autodesk® Revit® MEP.pdf"],
-        "sections": [
-          { "title": "Mediciones automáticas" },
-          { "title": "Tablas de elementos y sistemas" },
-          { "title": "Configuración de campos" },
-          { "title": "Exportación a Excel" }
-        ]
-      },
-      {
-        "id": "6.2",
-        "label": { "es": "6.2 Vistas de entrega", "ca": "6.2 Vistes de lliurament" },
-        "content": "documentacion-vistas.md",
-        "resources": ["EIC-B_Documentación_Autodesk®_Revit®_MEP_2016.pdf"],
-        "sections": [
-          { "title": "Preparación de plantas de instalaciones" },
-          { "title": "Secciones y alzados" },
-          { "title": "Vistas 3D específicas" },
-          { "title": "Aplicación de filtros por disciplina" }
-        ]
-      },
-      {
-        "id": "6.3",
-        "label": { "es": "6.3 Planos y cajetines", "ca": "6.3 Plànols i caixes de rotulació" },
-        "content": "documentacion-planos.md",
-        "resources": ["EIC-B_Fundamentos para Autodesk® Revit® MEP.pdf"],
-        "sections": [
-          { "title": "Composición de planos" },
-          { "title": "Cajetines y rotulación" },
-          { "title": "Escalas y representación gráfica" },
-          { "title": "Exportación e impresión" }
-        ]
-      }
-    ]
+    "subsections": []
   },
   {
-    "id": "herramientas_avanzadas",
-    "label": { "es": "MÓDULO 7: Herramientas Avanzadas y Flujo de Trabajo", "ca": "MÒDUL 7: Eines Avançades i Flux de Treball" },
+    "id": "modulo_7",
+    "label": { "es": "MÓDULO 7: ELECTRICIDAD" },
     "content": "mod-07.md",
-    "subsections": [
-      {
-        "id": "7.1",
-        "label": { "es": "7.1 Trabajo colaborativo", "ca": "7.1 Treball col·laboratiu" },
-        "content": "avanzadas-colaborativo.md",
-        "resources": ["EIC-B_Fundamentos para Autodesk® Revit® MEP.pdf"],
-        "sections": [
-          { "title": "Archivos centrales y locales" },
-          { "title": "Worksets básicos" },
-          { "title": "Sincronización de cambios" }
-        ]
-      },
-      {
-        "id": "7.2",
-        "label": { "es": "7.2 Detección de interferencias", "ca": "7.2 Detecció d'interferències" },
-        "content": "avanzadas-interferencias.md",
-        "resources": ["MEP_1_Modelado.docx"],
-        "sections": [
-          { "title": "Comprobación básica de colisiones" },
-          { "title": "Revisión entre disciplinas" },
-          { "title": "Corrección de errores comunes" }
-        ]
-      }
-    ]
+    "subsections": []
   },
   {
-    "id": "practica_final",
-    "label": { "es": "PRÁCTICA FINAL", "ca": "PRÀCTICA FINAL" },
-    "subsections": [
-      {
-        "id": "F.1",
-        "label": { "es": "F.1 Proyecto integrador", "ca": "F.1 Projecte integrador" },
-        "content": "practica-proyecto-integrador.md",
-        "resources": ["MEP_1_Modelado.docx", "MEP_2_Familias.docx"],
-        "sections": [
-          { "title": "Desarrollo completo de un proyecto pequeño" },
-          { "title": "Aplicación de todos los sistemas aprendidos" },
-          { "title": "Documentación final" },
-          { "title": "Presentación de resultados" }
-        ]
-      }
-    ]
+    "id": "modulo_8",
+    "label": { "es": "MÓDULO 8: PRÁCTICA" },
+    "content": "mod-08.md",
+    "subsections": []
   }
 ]
