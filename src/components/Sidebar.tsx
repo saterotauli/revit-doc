@@ -61,7 +61,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   return (
     <aside style={{ width: 350, background: '#5c6c87', color: '#fff', height: '100vh', padding: 0, display: 'flex', flexDirection: 'column' }}>
       <div style={{ padding: 24, borderBottom: '1px solid #444', background: '#232f3e', boxShadow: '0 4px 12px 0 rgba(0,0,0,0.07)', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-  <img src="/images/logo_pixel51_atc_acc.png" alt="Logo Revit MEP" style={{ maxHeight: 36, maxWidth: '70%', height: 'auto', width: 'auto', display: 'block', margin: '0 auto 12px auto' }} />
+  <img src={import.meta.env.BASE_URL + 'images/logo_pixel51_atc_acc.png'} alt="Logo Revit MEP" style={{ maxHeight: 36, maxWidth: '70%', height: 'auto', width: 'auto', display: 'block', margin: '0 auto 12px auto' }} />
   <div style={{
     fontWeight: 700,
     color: '#fff',
