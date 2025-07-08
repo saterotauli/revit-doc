@@ -50,6 +50,7 @@
   {
     "id": "practica_final",
     "label": { "es": "PRÁCTICA FINAL", "ca": "PRÀCTICA FINAL" },
+    "content": "practice.md",
     "subsections": []
   }
 ]
